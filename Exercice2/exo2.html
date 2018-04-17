@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="appGenius" ng-controller="carsCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>AngularJS Partie 4 Exercice 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="voiture.json"></script>
+  </head>
+  <style>
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
+  </style>
+  <body>
+    <h1>AngularJS Partie 4 Exercice 2</h1>
+    <div>
+      <ul>
+        <li ng-repeat="x in cars">{{x.marque + " " + x.couleur}}</li>
+      </ul>
+    </div>
+    <script>
+      var app = angular.module('appGenius', []);/*Création de la variable app qui va chercher les données dans appGenius et tous ce qui est compris dans []*/ 
+        app.controller('carsCtrl', function($scope,$http){
+          $http.get('voiture.json')
+          .then(function(response){
+            $scope.cars=response.data;
+          });
+        });
+    </script>
+  </body>
+</html>
