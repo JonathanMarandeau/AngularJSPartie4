@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>AngularJS Partie 4 Exercice 6</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <style>
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
+  </style>
+  <body>
+    <h1>AngularJS Partie 4 Exercice 6</h1>
+      <p>Faire une page HTML contenant deux paragrahes et deux boutons. Au clic sur le premier uniquement le paragrahe 1 doit être visible. Au clic sur le bouton deux, seulement le paragrahe 2 doit aparaître.</p>
+      <button ng-click="textMoi = false">Affiche 1er Paragraphe</button>
+      <button ng-click="textMoi = true">Affiche 2eme Paragraphe</button>
+      <div ng-hide="textMoi">
+        <p>JoJo Costaud</p>
+      </div>
+      <div ng-show="textMoi">
+        <p>JoJo Pas Costaud</p>
+      </div>
+  </body>
+</html>
