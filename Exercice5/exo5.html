@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>AngularJS Partie 4 Exercice 5</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <style>
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
+  </style>
+  <body>
+    <h1>AngularJS Partie 4 Exercice 5</h1>
+    <p>Faire une page HTML contenant un bouton Afficher et un bouton Cacher. Au clic sur l'un ou sur l'autre afficher ou non un paragraphe de votre choix.</p>
+    <button ng-click="hideLorem = false">Afficher</button>
+    <button ng-click="hideLorem = true">Cacher</button>
+    <div ng-hide="hideLorem">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur iaculis ipsum, eleifend tincidunt metus pellentesque quis. Sed ut tempus odio. Fusce quis nisi a nulla imperdiet ultricies. Ut eget euismod metus. In at dui at mi dignissim vestibulum at sed massa. Sed eget diam id enim efficitur fermentum id nec arcu. Duis varius efficitur quam scelerisque rhoncus. Proin sodales sem eu elementum imperdiet. Vivamus ac tellus a nisi facilisis gravida. Donec molestie eget velit vestibulum sagittis. Nullam aliquet facilisis libero sit amet ultricies. Vivamus massa eros, viverra non viverra pharetra, facilisis vel ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu turpis, blandit vitae luctus id, mollis ac justo. Curabitur tincidunt aliquam eleifend.</p>
+    </div>
+  </body>
+</html>
